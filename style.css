@@ -1,0 +1,317 @@
+body,html{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: hsl( 183 10% 10%);
+    color: hsl( 183 5% 76%);
+}
+
+.title{
+    color: hsl( 183 , 100% , 35% );
+}
+.navbar {
+    display: flex;
+    background-color: hsl( 183 30% 3%);
+    box-shadow: 4px 4px 10px hsl( 183 50% 3%);
+    align-items: center;
+    position: sticky;
+    top: 0;
+    padding: 5px 5px 0;
+    justify-content: space-around;
+    width: 100%;
+    gap: 5rem;
+    z-index: 1000;
+}
+.navbar a {
+    text-decoration: none;
+    color: #F7F7F7;
+}
+
+
+.list {
+    list-style: none;
+    display: flex;
+    pointer-events: none;
+    gap: 20px;
+}
+.list *{
+  transition: .2s;
+}
+
+
+.list > * {
+  pointer-events: auto;
+}
+
+.links:hover{
+    font-weight: bold;
+    text-decoration: underline;    
+}
+
+
+
+
+.home{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 1.5rem;
+}
+
+.image{
+    position: relative;
+    left: 5rem;
+}
+
+.about{
+width: 40rem;
+padding: 5px;
+}
+
+.about>p{
+line-height: 1.5rem;
+
+}
+
+
+
+p>a{
+    text-decoration: none;
+    font-style: italic;
+    color: rgb(0, 173, 181);
+    
+}
+
+/* form */
+.contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+}
+
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    border: 1px solid rgb(0, 173, 181);
+    border-radius: 10px;
+    width: 40rem;
+    gap: 5px;
+}
+label{
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+.contact-form>input{
+    width: 30rem;
+    border-radius: 5px;
+    height: 2rem;
+   background-color: hsl( 183 10% 15%); 
+   color: rgb(238, 238, 238);
+   border: none;
+}
+
+#info{
+    width: 30rem;
+    border-radius: 5px;
+    background-color: hsl( 183 10% 15%); 
+    color: rgb(238, 238, 238);
+    border: none;
+}
+
+#submit{
+    border-radius: 5px;
+    height: 25px;
+    width: 8rem;
+    position: relative;
+    top: 10px;
+    border: none;
+    background-color: hsl( 183 , 100% , 35% );
+}
+
+
+/* media queries responsive to mobile and tablet screens*/
+
+/* iPads (landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+  /* Styles */
+  
+
+.list {
+    align-items: center;
+    padding: 2px;
+}
+.navbar label {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 2px;
+}
+.navbar{
+    justify-content:space-around;
+    gap: 1rem;
+    padding: 5px;
+   
+}
+
+/* home */
+
+.home{
+display: flex;
+flex-direction: column;
+padding: 10px;
+align-items: center;
+justify-content: center;
+}
+.image{
+    left: 0;
+}
+.about{
+width: 40rem;
+text-align: justify;
+padding: 10px;
+}
+
+.about>p{
+line-height: 1.5rem;
+text-align: justify;
+}
+
+.contact{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+position: relative;
+left: 1rem;
+}
+
+.contact-form{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+padding: 20px;
+
+border-radius: 10px;
+width: 40rem;
+gap: 10px;
+}
+
+.contact-form>input{
+width: 35rem;
+border-radius: 5px;
+}
+
+#info{
+width: 35rem;
+border-radius: 5px;
+}
+
+#submit{
+border-radius: 5px;
+height: 35px;
+width: 8rem;
+}
+}
+
+
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+  /* Styles */
+  .navbar{
+    gap: 0;
+  }
+  .home{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+.about{
+width: 18rem;
+text-align: justify;
+padding: 5px;
+}
+
+.about>p{
+line-height: 1.5rem;
+
+}
+
+.image{
+    left: 0;
+}
+
+/* form */
+.contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: 1rem;
+    padding-top: 1rem;
+}
+
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    
+    border-radius: 10px;
+    width: 15rem;
+    gap: 5px;
+}
+
+.contact-form>input{
+    width: 10rem;
+    border-radius: 5px;
+}
+
+#info{
+    width: 10rem;
+    border-radius: 5px;
+}
+
+#submit{
+    border-radius: 5px;
+    height: 25px;
+    width: 8rem;
+}
+
+}
+
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 1224px) {
+  /* Styles */
+}
+
+
+/* Large screens ----------- */
+@media only screen 
+and (min-width : 1824px) {
+  /* Styles */
+}
